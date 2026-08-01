@@ -1,0 +1,2091 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    background:#080808;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+
+}
+
+
+:root{
+
+    --green:#00ff88;
+    --dark:#080808;
+    --card:#141414;
+    --gray:#999;
+
+}
+
+
+
+
+
+
+
+
+
+/* NAVBAR */
+
+
+header{
+
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+nav{
+
+    height:80px;
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+}
+
+
+
+.logo{
+
+    font-size:32px;
+    font-weight:700;
+    letter-spacing:2px;
+
+}
+
+
+
+.nav-links{
+
+    display:flex;
+    gap:35px;
+    list-style:none;
+
+}
+
+
+.nav-links a{
+
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:var(--green);
+
+}
+
+
+
+.menu-btn{
+
+    display:none;
+    font-size:30px;
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+
+/* HERO */
+
+
+.hero{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding:100px 8% 50px;
+
+}
+
+
+.hero-content{
+
+    max-width:600px;
+
+}
+
+
+.small-title{
+
+    color:var(--green);
+    letter-spacing:5px;
+
+}
+
+
+
+.hero h1{
+
+    font-family:'Bebas Neue';
+    font-size:110px;
+    line-height:.9;
+    margin:20px 0;
+
+}
+
+
+
+.hero p{
+
+    color:#bbb;
+    font-size:18px;
+
+}
+
+
+
+.buttons{
+
+    margin-top:40px;
+    display:flex;
+    gap:20px;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+    padding:15px 35px;
+    background:var(--green);
+    color:black;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:40px;
+    transition:.3s;
+
+}
+
+
+
+.btn:hover{
+
+    box-shadow:0 0 30px var(--green);
+    transform:scale(1.08);
+
+}
+
+
+
+.outline{
+
+    background:transparent;
+    color:white;
+    border:1px solid var(--green);
+
+}
+
+
+
+/* HERO BANNER */
+
+
+.hero{
+
+    min-height:80vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.8)
+    ),
+    url("https://yt3.googleusercontent.com/mTHEOiy9zqCIkRADI18gNNTMd24A1yw7PZDDrqhxiwxnz2qwfqkGzPigAHC0hslC8jYNiz7h=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+
+.hero-content{
+
+    position:relative;
+    z-index:2;
+
+}
+
+
+
+.hero h1{
+
+    font-family:'Bebas Neue';
+    font-size:120px;
+    line-height:.9;
+
+}
+
+
+
+.hero p{
+
+    max-width:600px;
+    margin:20px auto;
+}
+
+
+
+.hero-image img:hover{
+
+    filter:grayscale(0%);
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+
+
+/* GENERAL SECTIONS */
+
+
+section{
+
+    padding:100px 8%;
+
+}
+
+
+
+h2{
+
+    font-family:'Bebas Neue';
+    font-size:60px;
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+
+
+
+
+
+
+
+/* MUSIC */
+
+
+.music-container{
+
+    display:flex;
+    gap:40px;
+    justify-content:center;
+
+}
+
+
+
+.album-card{
+
+    background:var(--card);
+    padding:20px;
+    border-radius:20px;
+    width:350px;
+
+}
+
+
+
+.album-card img{
+
+    width:100%;
+    border-radius:15px;
+
+}
+
+
+
+.album-info h3{
+
+    font-size:25px;
+    margin:15px 0;
+
+}
+
+
+
+.album-info button{
+
+    background:var(--green);
+    border:0;
+    padding:12px 25px;
+    border-radius:30px;
+    margin-top:15px;
+
+}
+
+
+
+.tracks{
+
+    width:450px;
+
+}
+
+
+
+.track{
+
+    background:var(--card);
+    margin:15px;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    border-radius:10px;
+    transition:.3s;
+
+}
+
+
+
+.track:hover{
+
+    border-left:4px solid var(--green);
+    transform:translateX(10px);
+
+}
+
+
+
+
+
+
+
+
+/* ABOUT */
+
+
+.about{
+
+    display:flex;
+    align-items:center;
+    gap:60px;
+
+}
+
+
+
+.about-image img{
+
+    width:400px;
+    border-radius:20px;
+
+}
+
+
+
+.about-text{
+
+    max-width:600px;
+
+}
+
+
+
+.about-text p{
+
+    color:#aaa;
+    margin:20px 0;
+    line-height:1.8;
+
+}
+
+
+
+
+
+
+
+
+/* VIDEOS */
+
+
+.video-grid{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+
+}
+
+
+
+.video-card{
+
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+
+}
+
+
+
+.video-card img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+
+}
+
+
+
+.video-card div{
+
+    position:absolute;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#0008;
+    opacity:0;
+    transition:.3s;
+
+}
+
+
+
+.video-card:hover div{
+
+    opacity:1;
+    color:var(--green);
+    font-size:25px;
+
+}
+
+
+
+
+
+
+
+
+/* TOUR */
+
+
+.tour-box{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+
+}
+
+
+
+.tour-box div{
+
+    background:var(--card);
+    padding:30px;
+    width:250px;
+    text-align:center;
+    border-radius:15px;
+
+}
+
+
+.tour-box h3{
+
+    color:var(--green);
+
+}
+
+
+
+
+
+
+
+
+/* SHOP */
+
+
+.products{
+
+    display:flex;
+    justify-content:center;
+    gap:40px;
+
+}
+
+
+
+.product{
+
+    background:var(--card);
+    padding:20px;
+    border-radius:20px;
+
+}
+
+
+
+.product img{
+
+    width:250px;
+
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+    padding:50px;
+    text-align:center;
+    background:#050505;
+
+}
+
+
+.social{
+
+    margin-top:20px;
+    word-spacing:25px;
+    color:#aaa;
+
+}
+
+
+
+
+
+
+
+
+
+/* BEST ALBUM */
+
+
+.best-album{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+
+}
+
+
+
+.album-text{
+
+    width:500px;
+
+}
+
+
+
+.album-text h2{
+
+    text-align:left;
+    margin-bottom:20px;
+
+}
+
+
+
+.album-text h3{
+
+    font-size:35px;
+    margin-bottom:20px;
+
+    color:var(--green);
+
+}
+
+
+
+.album-text p{
+
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:15px;
+
+}
+
+
+
+.album-image img{
+
+    width:420px;
+    border-radius:20px;
+    transition:.5s;
+
+}
+
+
+
+.album-image img:hover{
+
+    transform:scale(1.05);
+    box-shadow:0 0 40px var(--green);
+
+}
+
+/* HERO VIDEO */
+
+
+.hero-video{
+
+    padding:0;
+    width:100%;
+    height:650px;
+    overflow:hidden;
+    position:relative;
+
+}
+
+
+
+.hero-video video{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+/* EGYPTIAN FEMALE RAPPER */
+
+
+.egypt-rapper{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+
+}
+
+
+
+.rapper-text{
+
+    width:500px;
+
+}
+
+
+
+.rapper-text h2{
+
+    text-align:left;
+    font-size:55px;
+    line-height:1.1;
+    margin-bottom:25px;
+
+}
+
+
+
+.rapper-text h3{
+
+    color:var(--green);
+    font-size:30px;
+    margin-bottom:20px;
+
+}
+
+
+
+.rapper-text p{
+
+    color:#aaa;
+    line-height:1.8;
+    margin-bottom:15px;
+
+}
+
+
+
+.rapper-image img{
+
+    width:420px;
+    border-radius:20px;
+    transition:.5s;
+
+}
+
+
+/* ================= EP SECTION ================= */
+
+
+.ep-section{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:80px;
+
+}
+
+
+
+.ep-image img{
+
+    width:420px;
+
+    border-radius:20px;
+
+    transition:.5s;
+
+}
+
+
+
+
+
+
+
+
+
+.ep-text{
+
+    width:500px;
+
+}
+
+
+
+.ep-text h2{
+
+    text-align:left;
+
+    font-size:60px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.ep-text h3{
+
+    color:var(--green);
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.ep-text p{
+
+    color:#aaa;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.ep-section{
+
+    flex-direction:column;
+
+}
+
+
+
+.ep-text{
+
+    width:100%;
+
+}
+
+
+
+.ep-text h2{
+
+    font-size:45px;
+
+}
+
+
+
+.ep-image img{
+
+    width:300px;
+
+}
+
+
+}
+
+/* ================= STAGE QUEEN ================= */
+
+
+.stage-queen{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:100px;
+
+}
+
+
+
+.stage-text{
+
+    width:550px;
+
+}
+
+
+
+.stage-text h2{
+
+    text-align:left;
+
+    font-size:75px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.stage-text h3{
+
+    color:var(--green);
+
+    font-size:25px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.stage-text p{
+
+    color:#aaa;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.stage-video video{
+
+    width:320px;
+
+    height:570px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:2px solid #222;
+
+    transition:.5s;
+
+}
+
+
+
+.stage-video video:hover{
+
+    box-shadow:0 0 40px var(--green);
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.stage-queen{
+
+    flex-direction:column;
+
+}
+
+
+
+.stage-text{
+
+    width:100%;
+
+}
+
+
+
+.stage-text h2{
+
+    font-size:55px;
+
+}
+
+
+
+.stage-video video{
+
+    width:280px;
+
+    height:500px;
+
+}
+
+
+}
+
+/* ================= BEST ALBUM PLAYER ================= */
+
+
+.album-player{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+
+}
+
+
+
+.album-cover img{
+
+    width:430px;
+    border-radius:25px;
+
+    transition:.5s;
+
+}
+
+
+
+.album-cover img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 40px var(--green);
+
+}
+
+
+
+
+
+.album-content{
+
+    width:600px;
+
+}
+
+
+
+.album-content h2{
+
+    text-align:left;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+
+.songs-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+
+
+
+
+.song{
+
+    background:#141414;
+
+    padding:25px 15px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+.song span{
+
+    color:var(--green);
+
+    font-size:14px;
+
+}
+
+
+
+.song i{
+
+    font-style:normal;
+
+    color:#aaa;
+
+}
+
+
+
+
+
+.song:hover{
+
+    transform:translateY(-8px);
+
+    border:1px solid var(--green);
+
+}
+
+
+
+
+
+.song.active{
+
+    background:var(--green);
+
+    color:black;
+
+    box-shadow:0 0 30px var(--green);
+
+}
+
+
+
+.song.active span,
+.song.active i{
+
+    color:black;
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.album-player{
+
+    flex-direction:column;
+
+}
+
+
+
+.album-content{
+
+    width:100%;
+
+}
+
+
+
+.songs-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+
+
+}
+
+/* ================= EGYPT VS SUDAN ================= */
+
+
+.battle-section{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:100px;
+
+}
+
+
+
+
+
+.battle-text{
+
+    width:550px;
+
+}
+
+
+
+
+.battle-text h2{
+
+    text-align:left;
+
+    font-family:'Bebas Neue';
+
+    font-size:75px;
+
+    line-height:1;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.battle-text h2 span{
+
+    color:var(--green);
+
+}
+
+
+
+
+
+.battle-text h3{
+
+    color:var(--green);
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+.battle-text p{
+
+    color:#aaa;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.battle-video video{
+
+    width:320px;
+
+    height:570px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    border:2px solid #222;
+
+    transition:.5s;
+
+}
+
+
+
+
+
+.battle-video video:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:0 0 45px var(--green);
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.battle-section{
+
+    flex-direction:column;
+
+}
+
+
+
+.battle-text{
+
+    width:100%;
+
+}
+
+
+
+.battle-text h2{
+
+    font-size:55px;
+
+}
+
+
+
+.battle-video video{
+
+    width:280px;
+
+    height:500px;
+
+}
+
+
+}
+
+/* ================= BAT3L2 SECTION ================= */
+
+
+.bat3l2-section{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:90px;
+
+}
+
+
+
+.bat3l2-text{
+
+    width:550px;
+
+}
+
+
+
+.bat3l2-text h2{
+
+    text-align:left;
+
+    font-family:'Bebas Neue';
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.bat3l2-text h3{
+
+    color:var(--green);
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.bat3l2-text p{
+
+    color:#aaa;
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.bat3l2-media{
+
+    text-align:center;
+
+}
+
+
+
+.bat3l2-media img{
+
+    width:420px;
+
+    border-radius:25px;
+
+    display:block;
+
+    margin-bottom:25px;
+
+    transition:.5s;
+
+}
+
+
+
+.bat3l2-media img:hover{
+
+    transform:scale(1.05);
+
+    box-shadow:0 0 40px var(--green);
+
+}
+
+
+
+
+.bat3l2-media button{
+
+    background:var(--green);
+
+    color:black;
+
+    border:none;
+
+    padding:15px 45px;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+
+
+.bat3l2-media button:hover{
+
+    box-shadow:0 0 30px var(--green);
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+@media(max-width:900px){
+
+
+.bat3l2-section{
+
+    flex-direction:column-reverse;
+
+}
+
+
+
+.bat3l2-text{
+
+    width:100%;
+
+}
+
+
+
+.bat3l2-media img{
+
+    width:300px;
+
+}
+
+
+
+}
+
+/* ================= BANGERS ================= */
+
+
+.bangers{
+
+    text-align:center;
+
+}
+
+
+
+.bangers h2{
+
+    font-family:'Bebas Neue';
+
+    font-size:70px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+
+.bangers-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+
+
+
+
+.banger-card{
+
+    background:#141414;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+
+
+
+
+.banger-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+.banger-card h3{
+
+    margin:20px 0;
+
+    font-size:22px;
+
+}
+
+
+
+
+
+.banger-card a{
+
+    display:inline-block;
+
+    background:var(--green);
+
+    color:black;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+
+
+
+
+
+
+.banger-card a:hover{
+
+    box-shadow:0 0 25px var(--green);
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+@media(max-width:900px){
+
+
+.bangers-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#050505;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #1a1a1a;
+
+}
+
+
+
+footer p{
+
+    color:#888;
+
+    margin:8px 0;
+
+    font-size:15px;
+
+}
+
+
+
+.credit{
+
+    font-size:16px;
+
+    letter-spacing:1px;
+
+}
+
+
+
+.credit span{
+
+    color:var(--green);
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.credit span:hover{
+
+    text-shadow:0 0 15px var(--green);
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+    background:#050505;
+    padding:50px 20px;
+    text-align:center;
+    border-top:1px solid #1a1a1a;
+
+}
+
+footer h3{
+
+    font-family:'Bebas Neue';
+    font-size:32px;
+    letter-spacing:2px;
+    margin-bottom:25px;
+
+}
+
+.footer-social{
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-bottom:30px;
+
+}
+
+.footer-social a{
+
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#141414;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:28px;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.footer-social a:hover{
+
+    transform:translateY(-6px) scale(1.1);
+
+}
+
+/* Instagram */
+.footer-social .fa-instagram:hover{
+
+    color:#E1306C;
+    text-shadow:0 0 15px #E1306C;
+
+}
+
+/* TikTok */
+.footer-social .fa-tiktok:hover{
+
+    color:#00F2EA;
+    text-shadow:0 0 15px #00F2EA;
+
+}
+
+/* YouTube */
+.footer-social .fa-youtube:hover{
+
+    color:#FF0000;
+    text-shadow:0 0 15px #FF0000;
+
+}
+
+/* Spotify */
+.footer-social .fa-spotify:hover{
+
+    color:#1DB954;
+    text-shadow:0 0 15px #1DB954;
+
+}
+
+.credit{
+
+    color:#888;
+    font-size:16px;
+
+}
+
+.credit span{
+
+    color:var(--green);
+    font-weight:600;
+
+}
+
+/* ================= CBC INTERVIEW ================= */
+
+.cbc-interview{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+
+}
+
+
+
+.cbc-text{
+
+    width:550px;
+
+}
+
+
+
+.cbc-text h2{
+
+    text-align:left;
+    font-family:'Bebas Neue';
+    font-size:65px;
+    line-height:1.1;
+    margin-bottom:20px;
+
+}
+
+
+
+.cbc-text h3{
+
+    color:var(--green);
+    font-size:28px;
+    margin-bottom:20px;
+
+}
+
+
+
+.cbc-text p{
+
+    color:#bdbdbd;
+    line-height:1.9;
+    margin-bottom:18px;
+
+}
+
+
+
+.watch-text{
+
+    color:white;
+    font-weight:600;
+    margin-top:25px;
+    margin-bottom:20px;
+
+}
+
+
+
+.cbc-image img{
+
+    width:430px;
+    border-radius:20px;
+    transition:.4s;
+
+}
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+    .cbc-interview{
+
+        flex-direction:column-reverse;
+
+    }
+
+    .cbc-text{
+
+        width:100%;
+
+    }
+
+    .cbc-text h2{
+
+        font-size:48px;
+
+    }
+
+    .cbc-image img{
+
+        width:300px;
+
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px){
+
+    header{
+
+        padding:0 15px;
+
+    }
+
+    nav{
+
+        width:100%;
+        height:70px;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    .nav-links{
+
+        display:none;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#111;
+        flex-direction:column;
+        gap:25px;
+        padding:25px 0;
+        text-align:center;
+
+    }
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    section{
+
+        padding:70px 20px;
+
+    }
+
+    .hero{
+
+        min-height:100vh;
+        padding:120px 20px 60px;
+
+    }
+
+    .hero h1{
+
+        font-size:65px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .btn{
+
+        width:220px;
+        text-align:center;
+
+    }
+
+    .egypt-rapper,
+    .best-album,
+    .ep-section,
+    .stage-queen,
+    .battle-section,
+    .bat3l2-section,
+    .cbc-interview,
+    .album-player,
+    .about,
+    .music-container{
+
+        flex-direction:column;
+        text-align:center;
+        gap:40px;
+
+    }
+
+    .rapper-text,
+    .album-text,
+    .ep-text,
+    .stage-text,
+    .battle-text,
+    .bat3l2-text,
+    .cbc-text{
+
+        width:100%;
+
+    }
+
+    .rapper-text h2,
+    .album-text h2,
+    .ep-text h2,
+    .stage-text h2,
+    .battle-text h2,
+    .bat3l2-text h2,
+    .cbc-text h2{
+
+        text-align:center;
+        font-size:48px;
+
+    }
+
+    .rapper-image img,
+    .album-image img,
+    .ep-image img,
+    .cbc-image img,
+    .album-cover img,
+    .bat3l2-media img{
+
+        width:100%;
+        max-width:330px;
+
+    }
+
+    .stage-video video,
+    .battle-video video{
+
+        width:260px;
+        height:460px;
+
+    }
+
+    .hero-video{
+
+        height:260px;
+
+    }
+
+    .video-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .songs-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .bangers-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .tour-box,
+    .products{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .tracks{
+
+        width:100%;
+
+    }
+
+    footer{
+
+        padding:40px 20px;
+
+    }
+
+}
