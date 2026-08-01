@@ -1,36 +1,26 @@
 
-// MOBILE MENU
-
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
+if(menuBtn && navLinks){
 
-menuBtn.addEventListener("click",()=>{
+    menuBtn.addEventListener("click",()=>{
 
-    navLinks.classList.toggle("active");
-
-});
-
-
-
-
-
-// CLOSE MENU WHEN CLICK LINK
-
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-
-    link.addEventListener("click",()=>{
-
-        navLinks.classList.remove("active");
+        navLinks.classList.toggle("active");
 
     });
 
+    document.querySelectorAll(".nav-links a").forEach(link=>{
 
-});
+        link.addEventListener("click",()=>{
 
+            navLinks.classList.remove("active");
 
+        });
+
+    });
+
+}
 
 
 
