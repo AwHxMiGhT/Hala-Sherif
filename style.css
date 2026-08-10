@@ -2089,3 +2089,1534 @@ footer h3{
     }
 
 }
+
+
+
+
+/* =====================================================
+   FLOOS SECTION
+   ===================================================== */
+
+section.floss-section {
+    width: 100%;
+    padding: 120px 6%;
+    background: #080808;
+    overflow: hidden;
+}
+
+
+/* ================= TITLE ================= */
+
+section.floss-section .floss-title {
+    margin: 0 0 60px 0;
+    padding: 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 75px;
+    line-height: 1;
+
+    text-align: center;
+    letter-spacing: 3px;
+
+    color: #ffffff;
+}
+
+section.floss-section .floss-title span {
+    color: var(--green);
+}
+
+
+/* ================= BANNER ================= */
+
+section.floss-section .floss-banner {
+    width: 100%;
+    height: 420px;
+
+    margin: 0 0 90px 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    
+
+    background: #111111;
+}
+
+section.floss-section .floss-banner img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+
+
+/* ================= CONTENT ================= */
+
+section.floss-section .floss-content {
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1fr)
+        minmax(350px, 1.25fr)
+        minmax(250px, 1fr);
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* ================= LEFT IMAGE ================= */
+
+section.floss-section .floss-left {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.floss-section .floss-left img {
+    width: 450;
+    max-width: 450px;
+    height: auto;
+
+    display: block;
+
+    border-radius: 25px;
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+
+
+
+/* ================= CENTER TEXT ================= */
+
+section.floss-section .floss-text {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding: 0;
+}
+
+section.floss-section .floss-text h3 {
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 58px;
+    line-height: 0.95;
+
+    color: #ffffff;
+}
+
+section.floss-section .floss-text h3 span {
+    color: var(--green);
+}
+
+section.floss-section .floss-text p {
+    margin: 0 0 20px 0;
+    padding: 0;
+
+    color: #aaaaaa;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+/* ================= QUOTE ================= */
+
+section.floss-section .floss-text p.floss-quote {
+    margin-top: 30px;
+    margin-bottom: 25px;
+
+    padding-left: 18px;
+
+    border-left: 3px solid var(--green);
+
+    color: #ffffff !important;
+
+    font-size: 19px;
+    font-weight: 600;
+}
+
+
+/* ================= FLOSS MUSIC BUTTON ================= */
+
+.floss-play {
+    margin-top: 20px;
+
+    padding: 15px 40px;
+
+    background: var(--green);
+    color: #000;
+
+    border: none;
+    border-radius: 40px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.floss-play:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 30px var(--green);
+}
+
+.floss-play:active {
+    transform: scale(0.98);
+}
+
+
+/* ================= RIGHT SIDE ================= */
+
+section.floss-section .floss-right {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+/* ================= RIGHT IMAGE ================= */
+
+section.floss-section .floss-right > img {
+    width: 600%;
+    max-width: 500px;
+
+    display: block;
+
+    border-radius: 25px;
+
+    transition: 0.5s ease;
+}
+
+
+
+
+/* ================= VIDEO ================= */
+
+section.floss-section .floss-video {
+    width: 600%;
+    max-width: 500px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #141414;
+}
+
+section.floss-section .floss-video video {
+    width: 100%;
+    height: 178px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ================= WATCH BUTTON ================= */
+
+section.floss-section .floss-watch {
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    background: var(--green);
+    color: #000;
+
+    border-radius: 40px;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+section.floss-section .floss-watch:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 30px var(--green);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    section.floss-section .floss-right {
+        width: 100%;
+    }
+
+    section.floss-section .floss-right > img {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    section.floss-section .floss-video {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    section.floss-section .floss-video video {
+        height: 200px;
+    }
+
+}
+
+
+/* ================= CALLEN SECTION ================= */
+
+.callen-section {
+    padding: 120px 6%;
+    background: #080808;
+    overflow: hidden;
+}
+
+
+/* ================= TITLE ================= */
+
+.callen-title {
+    font-family: 'Bebas Neue';
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+}
+
+.callen-title span {
+    color: var(--green);
+}
+
+
+/* ================= HERO VIDEO ================= */
+
+.callen-hero-video {
+    width: 100%;
+    aspect-ratio: 1920 / 785;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 90px;
+   
+}
+
+.callen-hero-video video {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ================= MAIN CONTENT ================= */
+
+.callen-content {
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* ================= LEFT ================= */
+
+.callen-left {
+    width: 100%;
+}
+
+.callen-side-video {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    
+    
+    margin-bottom: 30px;
+}
+
+.callen-side-video video {
+    width: 80%;
+    height: 50;
+    object-fit: cover;
+    display: block;
+
+    transition: .5s;
+}
+
+
+
+
+/* ================= LEFT TEXT ================= */
+
+.callen-left-text h3 {
+    font-family: 'Bebas Neue';
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.callen-left-text h3 span {
+    color: var(--green);
+}
+
+.callen-left-text p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ================= CENTER IMAGE ================= */
+
+.callen-center img {
+    width: 80%;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+
+/* ================= RIGHT ================= */
+
+.callen-right {
+    width: 100%;
+}
+
+.callen-right-text h3 {
+    font-family: 'Bebas Neue';
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.callen-right-text h3 span {
+    color: var(--green);
+}
+
+.callen-right-text p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.callen-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.callen-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 30px;
+
+    background: var(--green);
+    color: #000;
+
+    text-decoration: none;
+
+    border-radius: 40px;
+
+    font-weight: 700;
+    font-size: 15px;
+
+    transition: .3s;
+}
+
+.callen-btn:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 0 30px var(--green);
+}
+
+
+/* LISTEN BUTTON */
+
+.callen-listen {
+    background: transparent;
+    color: white;
+    border: 1px solid var(--green);
+}
+
+.callen-listen:hover {
+    background: var(--green);
+    color: #000;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .callen-section {
+        padding: 80px 20px;
+    }
+
+
+    .callen-title {
+        font-size: 55px;
+        margin-bottom: 40px;
+    }
+
+
+    .callen-hero-video {
+        margin-bottom: 60px;
+        border-radius: 15px;
+    }
+
+
+    .callen-content {
+        grid-template-columns: 1fr;
+        gap: 55px;
+        text-align: center;
+    }
+
+
+    /* CENTER IMAGE */
+
+    .callen-center {
+        order: 2;
+    }
+
+
+    /* LEFT */
+
+    .callen-left {
+        order: 1;
+    }
+
+
+    /* RIGHT */
+
+    .callen-right {
+        order: 3;
+    }
+
+
+    .callen-left-text h3,
+    .callen-right-text h3 {
+        font-size: 40px;
+    }
+
+
+    .callen-left-text p,
+    .callen-right-text p {
+        font-size: 15px;
+    }
+
+
+    .callen-buttons {
+        justify-content: center;
+    }
+
+
+    .callen-btn {
+        padding: 13px 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MSH BARTA7 SECTION
+   ========================================================= */
+
+.msh-barta7 {
+    width: 100%;
+    padding: 120px 6%;
+    background: #080808;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.msh-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 0 0 70px 0;
+    line-height: 1;
+}
+
+.msh-title span {
+    color: var(--green);
+}
+
+
+/* =========================================================
+   TOP AREA
+   LEFT IMAGE | CENTER TEXT | RIGHT IMAGE
+   ========================================================= */
+
+.msh-images {
+    width: 100%;
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.15fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+/* =========================================================
+   IMAGE BOX
+   ========================================================= */
+
+.msh-image-box {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =========================================================
+   IMAGES
+   ========================================================= */
+
+.msh-image-box img {
+    width: 100%;
+    height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 25px;
+
+    transition: 0.5s;
+}
+
+
+.msh-image-box img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 15px var(--green),
+        0 0 40px var(--green);
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+   ========================================================= */
+
+.msh-play {
+    margin-top: 25px;
+
+    padding: 15px 40px;
+
+    background: var(--green);
+    color: #000;
+
+    border: none;
+    border-radius: 40px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.msh-play:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 15px var(--green),
+        0 0 35px var(--green);
+}
+
+
+.msh-play:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   AUDIO
+   ========================================================= */
+
+.msh-audio {
+    display: none;
+}
+
+
+/* =========================================================
+   CENTER TEXT
+   ========================================================= */
+
+.msh-intro {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.msh-intro h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 25px 0;
+}
+
+
+.msh-intro h3::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    background: var(--green);
+
+    margin: 20px auto 0;
+
+    box-shadow: 0 0 12px var(--green);
+}
+
+
+.msh-intro p {
+    color: #aaa;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin: 0 0 20px 0;
+}
+
+
+/* =========================================================
+   BOTTOM AREA
+   VIDEO LEFT | TEXT RIGHT
+   ========================================================= */
+
+.msh-bottom {
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 120px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    align-items: center;
+
+    gap: 70px;
+
+    /*
+       تحريك الجزء كله ناحية اليمين
+    */
+    padding-left: 40px;
+}
+
+
+/* =========================================================
+   VIDEO
+   ========================================================= */
+
+.msh-video-box {
+    width: 100%;
+    max-width: 570px;
+
+    /*
+       تحريك الفيديو شوية ناحية الشمال
+    */
+    margin-left: -30px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+}
+
+
+.msh-video-box video {
+    width: 100%;
+    height: 700px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 25px;
+
+    border: 2px solid #1c1c1c;
+
+    transition: 0.5s;
+}
+
+
+.msh-video-box video:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 15px var(--green),
+        0 0 35px var(--green);
+}
+
+
+/* =========================================================
+   BOTTOM TEXT
+   ========================================================= */
+
+.msh-bottom-text {
+    width: 100%;
+    max-width: 650px;
+
+    /*
+       تحريك الكلام ناحية اليمين
+    */
+    margin-left: 40px;
+
+    padding: 20px;
+}
+
+
+.msh-bottom-text::before {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 4px;
+
+    background: var(--green);
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 0 15px var(--green);
+}
+
+
+.msh-bottom-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 60px;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 25px 0;
+}
+
+
+.msh-bottom-text p {
+    color: #aaa;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin: 0 0 20px 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .msh-barta7 {
+        padding: 80px 20px;
+    }
+
+
+    /* TITLE */
+
+    .msh-title {
+        font-size: 55px;
+
+        margin-bottom: 50px;
+    }
+
+
+    /* TOP */
+
+    .msh-images {
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+    }
+
+
+    /* CENTER TEXT */
+
+    .msh-intro {
+        max-width: 700px;
+
+        order: 2;
+    }
+
+
+    /* LEFT IMAGE */
+
+    .msh-image-box:nth-child(1) {
+        order: 1;
+    }
+
+
+    /* RIGHT IMAGE */
+
+    .msh-image-box:nth-child(3) {
+        order: 3;
+    }
+
+
+    .msh-image-box img {
+        height: auto;
+
+        max-height: 500px;
+    }
+
+
+    /* PLAY */
+
+    .msh-play {
+        padding: 14px 35px;
+
+        font-size: 15px;
+    }
+
+
+    /* BOTTOM */
+
+    .msh-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        margin-top: 80px;
+
+        padding-left: 0;
+    }
+
+
+    /* VIDEO */
+
+    .msh-video-box {
+        max-width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .msh-video-box video {
+        width: 100%;
+
+        height: 300px;
+    }
+
+
+    /* TEXT */
+
+    .msh-bottom-text {
+        max-width: 100%;
+
+        margin-left: 0;
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+
+    .msh-bottom-text::before {
+        margin: 0 auto 25px;
+    }
+
+
+    .msh-bottom-text h3 {
+        font-size: 45px;
+    }
+
+
+    .msh-bottom-text p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+}
+
+.memories-section {
+    padding: 100px 5%;
+    text-align: center;
+    background: #000;
+}
+
+.memories-section h2 {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+.memories-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 15px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.memories-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.memories-grid img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.15);
+}
+
+/* الموبايل */
+@media (max-width: 768px) {
+
+    .memories-section {
+        padding: 70px 20px;
+    }
+
+    .memories-section h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .memories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+}
+
+
+
+
+/* =========================================================
+   GLOBAL VOICE — PREMIUM SECTION
+========================================================= */
+
+.global-section {
+    position: relative;
+
+    padding: 140px 7%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   GREEN GLOW
+========================================================= */
+
+.global-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    
+
+    opacity: 0.035;
+
+    filter: blur(120px);
+
+
+    top: -200px;
+    left: -200px;
+
+    pointer-events: none;
+}
+
+
+.global-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    
+
+    opacity: 0.025;
+
+    filter: blur(120px);
+
+    
+
+    right: -200px;
+    bottom: -200px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.global-title {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 950px;
+
+    margin: 0 auto 90px;
+
+    text-align: center;
+}
+
+
+.global-title span {
+    display: inline-block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 7px;
+
+    color: var(--green);
+
+    margin-bottom: 18px;
+
+    position: relative;
+}
+
+
+.global-title span::before,
+.global-title span::after {
+    content: "";
+
+    display: inline-block;
+
+    width: 45px;
+
+    height: 1px;
+
+    
+
+    vertical-align: middle;
+
+    margin: 0 15px;
+
+   
+}
+
+
+.global-title h2 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 75px;
+
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    margin: 0 0 30px;
+
+    color: #fff;
+}
+
+
+.global-title p {
+    max-width: 760px;
+
+    margin: auto;
+
+    color: #999;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.global-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   VIDEO CONTAINER
+   9:16 — MOBILE SIZE
+========================================================= */
+
+.global-video {
+    position: relative;
+
+    width: 380px;
+
+    aspect-ratio: 9 / 16;
+
+    margin: auto;
+
+    overflow: hidden;
+
+   
+}
+
+
+.global-video::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    
+
+    border-radius: 25px;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+
+
+
+
+.global-video video {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: 0.6s ease;
+}
+
+
+
+
+
+/* =========================================================
+   TEXT SIDE
+========================================================= */
+
+.global-text {
+    position: relative;
+
+    padding: 20px 0 20px 25px;
+}
+
+
+/* =========================================================
+   GREEN VERTICAL LINE
+========================================================= */
+
+.global-text::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 20px;
+
+    width: 3px;
+
+    height: 120px;
+
+    background: var(--green);
+
+    box-shadow:
+        0 0 10px var(--green),
+        0 0 25px rgba(0, 255, 136, 0.5);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.global-number {
+    display: inline-block;
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 18px;
+
+    letter-spacing: 4px;
+
+    color: var(--green);
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.global-text h3 {
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 55px;
+
+    line-height: 0.95;
+
+    letter-spacing: 1px;
+
+    margin: 0 0 30px;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   PARAGRAPHS
+========================================================= */
+
+.global-text p {
+    color: #999;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+
+    margin-bottom: 20px;
+
+    max-width: 500px;
+}
+
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.global-line {
+    width: 80px;
+
+    height: 3px;
+
+    background: var(--green);
+
+    margin: 35px 0;
+
+    box-shadow: 0 0 15px var(--green);
+}
+
+
+/* =========================================================
+   FINAL STATEMENT
+========================================================= */
+
+.global-text h4 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 22px;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .global-section {
+        padding: 90px 20px;
+    }
+
+
+    /* ================= TITLE ================= */
+
+    .global-title {
+        margin-bottom: 60px;
+    }
+
+
+    .global-title span {
+        font-size: 11px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .global-title span::before,
+    .global-title span::after {
+
+        width: 25px;
+
+        margin: 0 8px;
+    }
+
+
+    .global-title h2 {
+        font-size: 48px;
+    }
+
+
+    .global-title p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    /* ================= CONTENT ================= */
+
+    .global-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    /* ================= MOBILE VIDEO ================= */
+
+    .global-video {
+
+        width: min(100%, 330px);
+
+        aspect-ratio: 9 / 16;
+
+        margin: auto;
+
+        border-radius: 20px;
+    }
+
+
+    .global-video video {
+
+        width: 100%;
+
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* ================= TEXT ================= */
+
+    .global-text {
+
+        padding: 20px 0 20px 20px;
+    }
+
+
+    .global-text h3 {
+
+        font-size: 42px;
+    }
+
+
+    .global-text p {
+
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    .global-text h4 {
+
+        font-size: 19px;
+    }
+
+}
