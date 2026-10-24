@@ -3620,3 +3620,835 @@ section.floss-section .floss-watch:hover {
     }
 
 }
+
+
+
+
+
+/* =========================
+   ENTA SECTION
+   BLACK + SILVER DESIGN
+========================= */
+
+.enta-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 110px 7%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #080808;
+    color: #fff;
+}
+
+/* BACKGROUND DECORATION */
+
+.enta-background-word {
+    position: absolute;
+    z-index: -1;
+    right: -25px;
+    bottom: 5px;
+    color: transparent;
+    -webkit-text-stroke: 1px #ffffff08;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(180px, 30vw, 430px);
+    line-height: 0.8;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* SECTION HEADING */
+
+.enta-heading {
+    position: relative;
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+.enta-overline {
+    display: block;
+    margin-bottom: 8px;
+    color: #999;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+
+.enta-heading h2 {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(85px, 13vw, 155px);
+    font-weight: 400;
+    line-height: 0.9;
+    letter-spacing: 8px;
+    color: #f5f5f5;
+}
+
+/* ENTA WORD - SILVER */
+
+.enta-heading h2 span {
+    color: #858585;
+    -webkit-text-stroke: 1px #bdbdbd;
+}
+
+.enta-heading-line {
+    width: 75px;
+    height: 3px;
+    margin: 22px auto 0;
+    background: linear-gradient(
+        90deg,
+        #555,
+        #bdbdbd,
+        #555
+    );
+}
+
+/* MAIN LAYOUT */
+
+.enta-layout {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(40px, 7vw, 100px);
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* LEFT IMAGE */
+
+.enta-visual {
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
+}
+
+.enta-image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #1a1a1a;
+    border: 1px solid #424242;
+    box-shadow: 18px 18px 0 #ffffff08;
+}
+
+.enta-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        #00000050 0%,
+        transparent 30%,
+        transparent 65%,
+        #000000a8 100%
+    );
+}
+
+.enta-image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(25%);
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.enta-image-wrap:hover img {
+    transform: scale(1.045);
+    filter: grayscale(0%);
+}
+
+/* IMAGE TEXT */
+
+.enta-image-number,
+.enta-image-caption {
+    position: absolute;
+    z-index: 1;
+    left: 22px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.enta-image-number {
+    top: 22px;
+    color: #eee;
+}
+
+.enta-image-caption {
+    bottom: 22px;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 5px;
+}
+
+/* LISTEN NOW BUTTON */
+
+.enta-listen {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    margin-top: 25px;
+    padding: 19px 23px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid #888;
+    background: #d7d7d7;
+    color: #111;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.enta-listen:hover {
+    background: #292929;
+    color: #fff;
+    border-color: #aaa;
+}
+
+/* PLAY ICON */
+
+.enta-listen-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 10px;
+}
+
+.enta-listen-arrow {
+    margin-left: auto;
+    font-size: 19px;
+    transition: transform 0.3s ease;
+}
+
+.enta-listen:hover .enta-listen-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* RIGHT TEXT */
+
+.enta-story {
+    position: relative;
+    min-width: 0;
+    padding: 10px 0;
+}
+
+/* STORY TOP LABELS */
+
+.enta-story-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.enta-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 13px;
+    border: 1px solid #424242;
+    color: #ccc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.enta-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: 0 0 10px #ffffff50;
+}
+
+.enta-side-label {
+    color: #777;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* MAIN HEADLINE */
+
+.enta-story h3 {
+    margin: 0 0 30px;
+    color: #f5f5f5;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 4.5vw, 66px);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: 1px;
+}
+
+/* HIGHLIGHTED HEADLINE - GRAY */
+
+.enta-story h3 span {
+    display: block;
+    color: #858585;
+}
+
+/* DIVIDER */
+
+.enta-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 30px;
+    background: linear-gradient(
+        90deg,
+        #888,
+        #383838,
+        transparent
+    );
+}
+
+/* DESCRIPTION */
+
+.enta-story p {
+    max-width: 680px;
+    margin: 0 0 22px;
+    color: #aaa;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.enta-story p:first-of-type {
+    color: #dedede;
+}
+
+/* FINAL SIGNATURE */
+
+.enta-signature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 38px;
+    color: #d1d1d1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.enta-signature-line {
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    flex-shrink: 0;
+    background: #aaa;
+}
+
+/* ANIMATION */
+
+@keyframes entaFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.enta-heading,
+.enta-visual,
+.enta-story {
+    animation: entaFadeUp 0.8s ease both;
+}
+
+.enta-visual {
+    animation-delay: 0.15s;
+}
+
+.enta-story {
+    animation-delay: 0.3s;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .enta-section {
+        padding: 85px 5%;
+    }
+
+    .enta-layout {
+        grid-template-columns:
+            minmax(0, 0.85fr)
+            minmax(0, 1.15fr);
+        gap: 35px;
+    }
+
+    .enta-story h3 {
+        font-size: clamp(36px, 5vw, 50px);
+    }
+
+    .enta-story p {
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .enta-story-top {
+        margin-bottom: 25px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .enta-section {
+        padding: 70px 6%;
+    }
+
+    .enta-heading {
+        margin-bottom: 45px;
+    }
+
+    .enta-heading h2 {
+        font-size: 100px;
+        letter-spacing: 5px;
+    }
+
+    .enta-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .enta-visual {
+        max-width: 390px;
+    }
+
+    .enta-story {
+        order: 2;
+    }
+
+    .enta-story h3 {
+        font-size: clamp(42px, 10vw, 58px);
+    }
+
+    .enta-story p {
+        font-size: 13px;
+    }
+
+    .enta-story-top {
+        gap: 12px;
+    }
+
+    .enta-side-label {
+        font-size: 9px;
+    }
+
+    .enta-background-word {
+        right: -10px;
+        bottom: 30px;
+        font-size: 200px;
+    }
+}
+
+/* REDUCE MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .enta-heading,
+    .enta-visual,
+    .enta-story {
+        animation: none;
+    }
+
+    .enta-image-wrap img,
+    .enta-listen,
+    .enta-listen-arrow {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+/* =========================================
+   MAFISH HAD MERTAH SECTION
+   ========================================= */
+
+section.mafish-section {
+    width: 100%;
+    padding: 120px 6%;
+    background: #080808;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ================= TITLE ================= */
+
+.mafish-title {
+    margin: 0 0 60px;
+    padding: 0;
+
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    letter-spacing: 3px;
+
+    color: #fff;
+}
+
+.mafish-title span,
+.mafish-text h3 span {
+    color: #A52A45;
+}
+
+/* ================= BANNER ================= */
+
+.mafish-banner {
+    width: 100%;
+    height: 420px;
+    margin: 0 0 90px;
+    overflow: hidden;
+    background: #14090C;
+}
+
+.mafish-banner img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.7s ease;
+}
+
+
+
+/* ================= MAIN CONTENT ================= */
+
+.mafish-content {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(250px, 0.8fr);
+
+    align-items: center;
+    gap: 80px;
+}
+
+/* ================= LEFT TEXT ================= */
+
+.mafish-text {
+    width: 100%;
+    min-width: 0;
+}
+
+.mafish-label {
+    display: inline-block;
+    margin-bottom: 25px;
+
+    color: #C0526B;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.mafish-text h3 {
+    margin: 0 0 30px;
+    padding: 0;
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 0.98;
+
+    color: #fff;
+}
+
+.mafish-text p {
+    margin: 0 0 22px;
+    padding: 0;
+
+    color: #AAA;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.95;
+}
+
+/* ================= QUOTE ================= */
+
+.mafish-text .mafish-quote {
+    margin-top: 32px;
+    margin-bottom: 0;
+    padding-left: 18px;
+
+    border-left: 3px solid #A52A45;
+
+    color: #F0D9DE;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ================= AUDIO PLAYER ================= */
+
+.mafish-player {
+    width: 100%;
+    max-width: 540px;
+    margin-top: 35px;
+    padding: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #190B0F,
+        #0D0D0D
+    );
+
+    border: 1px solid #54202E;
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+/* PLAY / PAUSE BUTTON */
+
+.mafish-audio-btn {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #A52A45;
+    color: #fff;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.mafish-audio-btn:hover {
+    background: #C03958;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #A52A4550;
+}
+
+.mafish-audio-btn:active {
+    transform: scale(0.96);
+}
+
+/* TRACK INFORMATION */
+
+.mafish-audio-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mafish-track-name {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #F0D9DE;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* PROGRESS BAR */
+
+.mafish-audio-progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #AAA;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+.mafish-audio-progress input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    height: 4px;
+
+    accent-color: #A52A45;
+    cursor: pointer;
+}
+
+/* ================= RIGHT SIDE ================= */
+
+.mafish-right {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+/* COVER IMAGE */
+
+.mafish-right img {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 4 / 5;
+
+    display: block;
+    object-fit: cover;
+
+    border: 1px solid #3A1720;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 50px #000;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+
+/* VISIT BUTTON */
+
+.mafish-visit {
+    display: inline-block;
+    padding: 15px 42px;
+
+    background: #A52A45;
+    color: #fff;
+
+    border: 1px solid #C0526B;
+    border-radius: 40px;
+
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    transition: 0.3s ease;
+}
+
+.mafish-visit:hover {
+    background: #C03958;
+    transform: translateY(-3px);
+    box-shadow: 0 0 28px #A52A4560;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    section.mafish-section {
+        padding: 80px 5%;
+    }
+
+    .mafish-banner {
+        height: 300px;
+        margin-bottom: 55px;
+    }
+
+    .mafish-content {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .mafish-text {
+        order: 1;
+    }
+
+    .mafish-right {
+        order: 2;
+    }
+
+    .mafish-right img {
+        max-width: 350px;
+    }
+
+    .mafish-player {
+        max-width: 100%;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 500px) {
+
+    section.mafish-section {
+        padding: 65px 5%;
+    }
+
+    .mafish-title {
+        margin-bottom: 35px;
+        letter-spacing: 1px;
+    }
+
+    .mafish-banner {
+        height: 220px;
+        margin-bottom: 40px;
+    }
+
+    .mafish-text p {
+        font-size: 14px;
+    }
+
+    .mafish-player {
+        padding: 13px;
+        gap: 12px;
+    }
+
+    .mafish-audio-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    .mafish-track-name {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .mafish-audio-progress {
+        gap: 7px;
+        font-size: 10px;
+    }
+}
