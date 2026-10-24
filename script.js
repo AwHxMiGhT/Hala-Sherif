@@ -428,3 +428,219 @@ globalSection.addEventListener("mouseleave", () => {
     globalVideo.currentTime = 0;
 
 });
+
+
+
+
+/* ================= ENTA AUTO PLAY ON SCROLL ================= */
+
+const entaSection = document.getElementById("enta");
+const entaAudio = document.getElementById("entaAudio");
+const entaStatus = document.getElementById("entaStatus");
+
+if (entaSection && entaAudio) {
+
+    let entaWasBlocked = false;
+
+    function stopProjectMusic() {
+
+        // Album player created with new Audio()
+        if (typeof currentAudio !== "undefined" && currentAudio) {
+            currentAudio.pause();
+        }
+
+        // Existing audio elements
+        document.querySelectorAll("audio").forEach(audio => {
+            if (audio !== entaAudio) {
+                audio.pause();
+            }
+        });
+
+        // MSH BARTA7 players
+        if (typeof mshAudios !== "undefined") {
+            mshAudios.forEach(audio => audio.pause());
+        }
+    }
+
+    async function startEntaAudio() {
+
+        if (!entaAudio.paused) return;
+
+        stopProjectMusic();
+
+        try {
+            await entaAudio.play();
+            entaWasBlocked = false;
+
+            if (entaStatus) {
+                entaStatus.innerHTML =
+                    '<span class="enta-dot"></span> NOW PLAYING: ENTA';
+            }
+
+        } catch (error) {
+            entaWasBlocked = true;
+
+            if (entaStatus) {
+                entaStatus.textContent =
+                    "TAP LISTEN NOW TO PLAY";
+            }
+
+            console.log("ENTA autoplay blocked:", error);
+        }
+    }
+
+    const entaObserver = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                if (entaAudio.paused) {
+                    startEntaAudio();
+                }
+            } else {
+                entaAudio.pause();
+
+                if (entaStatus) {
+                    entaStatus.innerHTML =
+                        '<span class="enta-dot"></span> ENTA — THE NEW ERA';
+                }
+            }
+
+        });
+
+    }, {
+        threshold: 0.4
+    });
+
+    entaObserver.observe(entaSection);
+
+    // Clicking LISTEN NOW opens YouTube; it does not play the local audio.
+}
+
+
+
+
+
+/* =========================================
+   MAFISH HAD MERTAH AUDIO PLAYER
+   ========================================= */
+
+const mafishAudio = document.getElementById("mafish-audio");
+
+const mafishPlayBtn = document.getElementById("mafish-play-btn");
+const mafishPlayIcon = document.getElementById("mafish-play-icon");
+
+const mafishProgress = document.getElementById("mafish-progress");
+const mafishCurrentTime = document.getElementById("mafish-current-time");
+const mafishDuration = document.getElementById("mafish-duration");
+
+/* FORMAT TIME */
+
+function formatMafishTime(seconds) {
+    if (!Number.isFinite(seconds)) {
+        return "0:00";
+    }
+
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
+}
+
+/* PLAY / PAUSE */
+
+mafishPlayBtn.addEventListener("click", async () => {
+
+    if (mafishAudio.paused) {
+
+        try {
+            await mafishAudio.play();
+        } catch (error) {
+            console.error("Unable to play audio:", error);
+        }
+
+    } else {
+
+        mafishAudio.pause();
+
+    }
+
+});
+
+/* UPDATE BUTTON ICON */
+
+mafishAudio.addEventListener("play", () => {
+
+    mafishPlayIcon.textContent = "Ⅱ";
+
+    mafishPlayBtn.setAttribute(
+        "aria-label",
+        "Pause music"
+    );
+
+});
+
+mafishAudio.addEventListener("pause", () => {
+
+    mafishPlayIcon.textContent = "▶";
+
+    mafishPlayBtn.setAttribute(
+        "aria-label",
+        "Play music"
+    );
+
+});
+
+/* LOAD TRACK DURATION */
+
+mafishAudio.addEventListener("loadedmetadata", () => {
+
+    mafishDuration.textContent =
+        formatMafishTime(mafishAudio.duration);
+
+});
+
+/* UPDATE PROGRESS */
+
+mafishAudio.addEventListener("timeupdate", () => {
+
+    mafishCurrentTime.textContent =
+        formatMafishTime(mafishAudio.currentTime);
+
+    if (
+        Number.isFinite(mafishAudio.duration) &&
+        mafishAudio.duration > 0
+    ) {
+
+        mafishProgress.value =
+            (mafishAudio.currentTime / mafishAudio.duration) * 100;
+
+    }
+
+});
+
+/* SEEK THROUGH TRACK */
+
+mafishProgress.addEventListener("input", () => {
+
+    if (
+        Number.isFinite(mafishAudio.duration) &&
+        mafishAudio.duration > 0
+    ) {
+
+        mafishAudio.currentTime =
+            (Number(mafishProgress.value) / 100) *
+            mafishAudio.duration;
+
+    }
+
+});
+
+/* RESET PROGRESS WHEN TRACK ENDS */
+
+mafishAudio.addEventListener("ended", () => {
+
+    mafishProgress.value = 0;
+    mafishCurrentTime.textContent = "0:00";
+
+});
